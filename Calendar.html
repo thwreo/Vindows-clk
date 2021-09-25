@@ -10,8 +10,8 @@
 </head>
 
 <body onload="windowsClock(), windowsDate()">
-    <p id="clock"></p>
-    <p id="date"></p>
+    <div id="clock"></div>
+    <div id="date"></div>
     <svg id="lineSpace">
         <rect id="line"></rect>
     </svg>
@@ -33,14 +33,16 @@
     </p> -->
     <table id="dateTable">
         <tr>
-            <td class="dateAndArr" colspan="5" id="underDate"></td>
+            <td class="dateAndArr" colspan="5">
+                <div id="underDate"></div>
+            </td>
             <td class="dateAndArr"> <svg width="16px" height="8px">
-                    <polyline id="upArr" fill="none" stroke="#B3B6B9" points="
+                    <polyline id="upArr" fill="#242424" stroke="#a3a3a3" points="
                 0,8 8,0 16,8 " />
                 </svg>
             </td>
             <td class="dateAndArr"> <svg width="16px" height="8px">
-                    <polyline id="downArr" fill="none" stroke="#B3B6B9" points="
+                    <polyline id="downArr" fill="#242424" stroke="#a3a3a3" points="
                 0,0 8,8 16,0 " />
                 </svg>
             </td>
@@ -113,3 +115,5 @@
         <rect id="line"></rect>
     </svg>
 </body>
+
+</html>

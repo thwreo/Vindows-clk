@@ -1,5 +1,5 @@
 #clock {
-    color:white;
+    color:#f8f8f8;
     font-size: 65px;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 100;
@@ -8,18 +8,20 @@
     cursor: default;
 }
 #date {
-    color: #7BAED5;
+    color: #86abc9;
     /* system fonts!!! */
     font-size: 15px;
+    text-transform: capitalize;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 400;
     margin: 0%;
     margin-bottom: 8px;
     padding-left: 20px;
     cursor: pointer;
+    width: fit-content;
 }
 #date:hover {
-    color: #70777C;
+    color: #838384;
 }
 #lineSpace {
     width: 100%;
@@ -34,27 +36,31 @@
 }
 .dateAndArr:hover {
     /* pointer-events: none; */
-    border: 3px solid #292828;
+    border: 3px solid #242424;
 }
 #underDate {
-    color: #B3B6B9;
+    color: #bfbfbf;
     font-family: 'Segoe UI', sans-serif;
-    font-weight: 350;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 375;
     text-align: left;
     cursor: default;
+    width: fit-content;
 }
 #underDate:hover {
-    color: white;
+    color: #f7f7f7;
 }
 #upArr:hover {
-    color: white;
+    stroke: #f7f7f7;
 }
 #downArr:hover {
-    color: white;
+    stroke: #f7f7f7;
 }
 
 #dateTable {
     color: white;
+    margin: none;
 }
 th {
     text-align: center;
@@ -78,11 +84,11 @@ td:hover {
     border: 3px solid darkgrey;
 }
 #dateTable, th, td {
-    border: 3px solid #292828;
+    border: 3px solid #242424;
 }
 #crtDate {
-    background-color: #3778bf;
-    border: 3px solid #3778bf;
+    background-color: #0078d7;
+    border: 3px solid #0078d7;
     outline: 3px solid black;
     outline-offset: -6px;
 }
@@ -90,5 +96,7 @@ td:hover {
     border: 3px solid lightblue;
 }
 body {
-    background-color: #292828 ;
+    width: fit-content;
+    height: fit-content;
+    background-color: #242424;
 }
