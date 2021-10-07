@@ -1,12 +1,6 @@
 var lang = navigator.language;
 var crtYear, crtMonth, crtDate;
 var month, year;
-class DateType {
-    constructor(string, nr) {
-        this.type = string;
-        this.value = nr;
-    }
-}
 function windowsClock() {
     var options = { hour: '2-digit', minute: '2-digit', 
     second: '2-digit', hour12: false}
@@ -28,21 +22,11 @@ function windowsDate() {
     changeTable(year, month);
 }
 function backMonth() {
-    if (month == 0) {
-        month = 11;
-        year -= 1;
-    } else {
-        month -= 1;
-    }
+    (month == 0) ? (month = 11, year -= 1) : month -= 1;
     changeTable(year, month);
 }
 function forwardMonth() {
-    if (month == 11) {
-        month = 0;
-        year += 1;
-    } else {
-        month += 1;
-    }
+    (month == 11) ? (month = 0, year += 1) : month += 1;
     changeTable(year, month);
 }
 function generateDatesTable(y, m) {
@@ -53,16 +37,15 @@ function generateDatesTable(y, m) {
     var count = firstDay + 1;
     var prevMonth = m;
     var nrCrtMonth = new Date(y, m + 1, 0).getDate();
-    if (m == 0) {
-        prevMonth = 11;
-    } else {
-        prevMonth -= 1;
-    }
+    (m == 0) ? prevMonth = 11 : prevMonth -= 1;
     var nrPrevMonth = new Date(y, prevMonth + 1, 0).getDate();
     var startNr = firstLineStartVal(nrPrevMonth, firstDay);
     for (i = 0; i < firstDay; i++) {
         table += '<td style="color:grey">' + startNr + '</td>';
         startNr += 1;
+    }
+    if (firstDay == 7) {
+        table += '</tr>' + '<tr>';
     }
     for (i = 1; i <= nrCrtMonth; i++) {
         if (m == crtMonth && i == crtDate && y == crtYear) {
